@@ -1,0 +1,2 @@
+My AI goes to a point in space (I don't call waypoints because Andrea doesn't let me, she says that it makes no sense) 
+when the player is near an emeny, the AI follow. The enemy can see you from further away if you go front of him.

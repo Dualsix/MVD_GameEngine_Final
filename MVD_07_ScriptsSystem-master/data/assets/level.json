@@ -1,0 +1,82 @@
+{
+  "scene": "final",
+  "directory": "data/assets/",
+  "geometries": [
+    {
+      "name": "plane_40x40",
+      "file": "plane_40x40.obj"
+    },
+    {
+      "name": "hand",
+      "file": "Crazy_Hand.obj"
+    }
+  ],
+  "textures": [
+    {
+      "name": "red",
+      "file": "red.tga"
+    },
+    {
+      "name": "hand_tex",
+      "file": "white.tga"
+    }
+  ],
+  "shaders": [
+    {
+      "name": "phong",
+      "vertex": "data/shaders/phong.vert",
+      "fragment": "data/shaders/phong.frag"
+    }
+  ],
+  "materials": [
+    {
+      "name": "red",
+      "shader": "phong",
+      "diffuse_texture": "red"
+    },
+    {
+      "name": "masterhand",
+      "shader": "phong",
+      "diffuse_texture": "hand_tex"
+    }
+  ],
+  "lights": [
+    {
+      "name": "Light",
+      "position": [ 100, 100, 100 ],
+      "color": [ 1, 1, 1 ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "floor",
+      "geometry": "plane_40x40",
+      "material": "red",
+      "transform": {
+        "translate": [ 0, 0, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 3, 3, 3 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 20, 0.5, 20 ]
+      }
+    },
+    {
+      "name": "CrazyHand",
+      "geometry": "hand",
+      "material": "masterhand",
+      "transform": {
+        "translate": [ 0, 2.5, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 0.1, 0.1, 0.1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 9, 0 ],
+        "halfwidth": [ 8, 7, 7 ]
+      }
+    }
+  ]
+}
