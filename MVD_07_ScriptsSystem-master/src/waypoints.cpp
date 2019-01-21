@@ -102,7 +102,9 @@ void waypoints::update(float dt)
 	}
 	//si va a por los waypoints
 	else if (playerDist >= seguir ) {
-		frontal = false;
+		if (seguir == 6) {
+			first = true;
+		}
 		first_seguir = true;
 		//distancia hasta el target
 		distTarget = lm::vec3(Waypoints[current_waypoint].x - initialPosition.x, 0, Waypoints[current_waypoint].z - initialPosition.z);
